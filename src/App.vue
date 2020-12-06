@@ -25,9 +25,11 @@
   <!-- <KeyCodeRemove></KeyCodeRemove> -->
 
   <!-- $on $off 和 $once被移除 -->
-  <button @click="sendMsg">emit event</button>
+  <!-- <button @click="sendMsg">emit event</button>
+  <MittDemo></MittDemo> -->
 
-  <MittDemo></MittDemo>
+  <!-- 实际案例 -->
+  <Todos></Todos>
   <div></div>
 </template>
 
@@ -39,6 +41,8 @@ import EmitsComponentOption from './components/EmitsComponentOption.vue'
 import TransitonTest from './components/TransitonTest.vue'
 import KeyCodeRemove from './components/KeyCodeRemove.vue'
 import MittDemo from './components/MittDemo.vue'
+
+import Todos from './components/todos/Todos.vue'
 
 //事件派发和监听
 import mitt from 'mitt'
@@ -53,7 +57,8 @@ export default {
     EmitsComponentOption,
     TransitonTest,
     KeyCodeRemove,
-    MittDemo
+    MittDemo,
+    Todos
   },
   methods:{
     handleClick(){

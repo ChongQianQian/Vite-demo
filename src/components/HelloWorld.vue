@@ -79,7 +79,7 @@ function userCounter() {
     clearInterval(timer);
   });
  
-  return data; //这个需要使用data.counter获取数据，笔记麻烦
+  return data; //这个需要使用data.counter获取数据，比较麻烦
 }
 
 function userCounterTorefs() {
@@ -102,6 +102,6 @@ function userCounterTorefs() {
     clearInterval(timer);
   });
  
- return toRefs(data) //这样就会变成单值相应式的数据
+ return toRefs(data) //这样就会变成单值响应式的数据
 }
 </script>
