@@ -1,9 +1,8 @@
 <template>
   <h1>{{ msg }}</h1>
+  <!-- vue2.x中的data声明 -->
   <button @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  
   <!-- reactive声明方式:必须得使用data.xxx -->
   <p>data中的数据是： {{ data.counter }}</p>
   <p>data中的双数据是：{{ data.doubleCounter }}</p>
@@ -35,12 +34,13 @@ export default {
       count: 0,
     };
   },
-  setup() {
+  setup() { //setup() 函数现在只是简单地作为调用所有组合函数的入口：
+  
     //data相关的处理：这样可以集中的处理data中的逻辑；
     const data = userCounter();
 
     //other data:other data的数据处理逻辑
-    let data2 = ref("其他数据"); //使用ref来声明单值的相应式数据
+    let data2 = ref("其他数据"); //使用ref来声明单值的响应式数据
     data2 = 2; //不会报错
 
     //other data:使用torefs()

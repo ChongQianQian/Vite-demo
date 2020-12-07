@@ -1,8 +1,9 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
 
   <!-- 1.composition api -->
   <!-- <HelloWorld msg="Hello Vue 3.0 + Vite" /> -->
+  <!-- 与现有的 API 配合 this使用 -->
+  <!-- <CompositionDemo/> -->
 
   <!-- 2.teleport传送门 -->
   <!-- <TelepoerDemo></TelepoerDemo> -->
@@ -28,21 +29,26 @@
   <!-- <button @click="sendMsg">emit event</button>
   <MittDemo></MittDemo> -->
 
+  <!-- v-model使用的变化：子组件更改父组件的数据 -->
+  <VModel></VModel>  
+
   <!-- 实际案例 -->
-  <Todos></Todos>
+  <!-- <Todos></Todos> -->
+
   <div></div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import CompositionDemo from './components/CompositionDemo.vue'
 import TelepoerDemo from './components/TelepoerDemo.vue'
 import FragmentsDemo from './components/FragmentsDemo.vue'
 import EmitsComponentOption from './components/EmitsComponentOption.vue'
 import TransitonTest from './components/TransitonTest.vue'
 import KeyCodeRemove from './components/KeyCodeRemove.vue'
 import MittDemo from './components/MittDemo.vue'
-
-import Todos from './components/todos/Todos.vue'
+import VModel from './components/VModel.vue'; 
+// import Todos from './components/todos/Todos.vue' //局部注册组件
 
 //事件派发和监听
 import mitt from 'mitt'
@@ -52,13 +58,15 @@ export default {
   name: 'App',
   components: {
     HelloWorld,
+    CompositionDemo,
     TelepoerDemo,
     FragmentsDemo,
     EmitsComponentOption,
     TransitonTest,
     KeyCodeRemove,
     MittDemo,
-    Todos
+    VModel
+    // Todos
   },
   methods:{
     handleClick(){
