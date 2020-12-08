@@ -11,36 +11,35 @@
   <!-- 3.Fragments:vue3.x组件可以拥有多个根； -->
   <!-- <FragmentsDemo></FragmentsDemo> -->
 
+  <!-- 6.渲染函数 API -->
+  <!-- <RenderHDemo></RenderHDemo> -->
+
+  <!-- 8.v-model使用的变化：子组件更改父组件的数据 -->
+  <!-- <VModel></VModel>   -->
+
+  <!-- 12.Suspense -->
+  <!-- <SuspenseDemo></SuspenseDemo> -->
+
+  <!-- 13.transiton类名变更 -->
+  <!-- <TransitonTest></TransitonTest> -->
+
+  <!--14-1 keyCode作为v-on修饰符被移除； -->
+  <!-- <KeyCodeRemove></KeyCodeRemove> -->
+
+  <!--14-2 $on $off 和 $once被移除 -->
+  <!-- <button @click="sendMsg">emit event</button>
+  <MittDemo></MittDemo> -->
+
   <!-- 4.Emits Component Option -->
   <!-- <EmitsComponentOption @click="handleClick" @myclick="myclick"></EmitsComponentOption> -->
   
-  <!-- 5.自定义渲染器(custom renderer) -->
 
   <!-- 实例方法定义组件 -->
   <!-- <comp></comp> -->
 
-  <!-- transiton类名变更 -->
-  <!-- <TransitonTest></TransitonTest> -->
-
-  <!-- keyCode作为v-on修饰符被移除； -->
-  <!-- <KeyCodeRemove></KeyCodeRemove> -->
-
-  <!-- $on $off 和 $once被移除 -->
-  <!-- <button @click="sendMsg">emit event</button>
-  <MittDemo></MittDemo> -->
-
-  <!-- v-model使用的变化：子组件更改父组件的数据 -->
-  <!-- <VModel></VModel>   -->
-
-  <!-- Suspense -->
-  <!-- <SuspenseDemo></SuspenseDemo> -->
-
-  <!-- 渲染函数 API -->
-  <RenderHDemo></RenderHDemo>
 
   <!-- 实际案例 -->
   <!-- <Todos></Todos> -->
-
   <div></div>
 </template>
 

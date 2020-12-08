@@ -8,14 +8,6 @@
 
 <script>
 export default {
-  data() {
-      return {
-          modelOpen :true
-      }
-  },
-  setup() {
-    return {};
-  },
 };
 </script>
 <style>

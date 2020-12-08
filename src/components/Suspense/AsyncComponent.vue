@@ -1,9 +1,10 @@
 <template>
-  <div>异步示例</div>
+  <div>异步数据请求功能</div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+
 export default defineComponent({
   name: "AsyncComponent",
   setup() {

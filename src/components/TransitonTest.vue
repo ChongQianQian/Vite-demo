@@ -1,10 +1,3 @@
-<!--
- * @Author: 云乐
- * @Date: 2020-12-06 18:04:29
- * @LastEditTime: 2020-12-06 18:11:50
- * @LastEditors: 云乐
- * @Description: 
--->
 <template >
     <div>
         <button @click="show=!show">toggle</button>
@@ -15,7 +8,6 @@
 </template>
 <script>
 export default {
-    // name:"TransitonTest",
     data(){
         return {
             show:true

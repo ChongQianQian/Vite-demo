@@ -12,6 +12,7 @@
 <script>
 import { reactive, toRefs, ref } from "vue";
 import AsyncComponent from './Suspense/AsyncComponent.vue';
+
 export default {
    components: {
      AsyncComponent,

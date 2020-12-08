@@ -4,18 +4,19 @@
   <button @click="count++">count is: {{ count }}</button>
   
   <!-- reactive声明方式:必须得使用data.xxx -->
-  <p>data中的数据是： {{ data.counter }}</p>
-  <p>data中的双数据是：{{ data.doubleCounter }}</p>
+  <p>reactive声明方式数据是： {{ data.counter }}</p>
+  <p>reactive声明方式双数据是：{{ data.doubleCounter }}</p>
   <button @click="data.change">双击改变</button>
 
+  <!-- ref -->
+  <p ref="desc"></p>
+
   <!-- ref声明方式 -->
-  <p>data中的数据是： {{ data2 }}</p>
+  <p>ref声明方式数据是： {{ data2 }}</p>
 
   <!-- refs方式 -->
   <p>refs转换的数据：{{doubleCounter}}</p>
 
-  <!-- ref -->
-  <p ref="desc"></p>
 </template>
 
 <script>
@@ -49,7 +50,6 @@ export default {
     //other data:使用元素的引用ref：
     const desc = ref(null)
     watch(()=>data.counter,(value,oldvalue)=>{
-       //desc.value == <p></p>
       const p = desc.value
       p.textContent  = `counter change from ${oldvalue} to ${value}`
     })
@@ -61,23 +61,23 @@ export default {
 function userCounter() {
   // reactive: 接收一个普通对象然后返回该对象的响应式代理，等同于2.x中的Vue.observable()；
   const data = reactive({
-    counter: 1, //单个数据
+    counter: 1,
     doubleCounter: computed(() => data.counter * 2),
     change: () => {
       data.counter++;
     },
   });
 
-  let timer;
-  onMounted(() => {
-    timer = setInterval(() => {
-      data.counter++;
-    }, 1000);
-  });
+  // let timer;
+  // onMounted(() => {
+  //   timer = setInterval(() => {
+  //     data.counter++;
+  //   }, 1000);
+  // });
 
-  onUnmounted(() => {
-    clearInterval(timer);
-  });
+  // onUnmounted(() => {
+  //   clearInterval(timer);
+  // });
  
   return data; //这个需要使用data.counter获取数据，比较麻烦
 }
@@ -91,16 +91,16 @@ function userCounterTorefs() {
     },
   });
 
-  let timer;
-  onMounted(() => {
-    timer = setInterval(() => {
-      data.counter++;
-    }, 1000);
-  });
+  // let timer;
+  // onMounted(() => {
+  //   timer = setInterval(() => {
+  //     data.counter++;
+  //   }, 1000);
+  // });
 
-  onUnmounted(() => {
-    clearInterval(timer);
-  });
+  // onUnmounted(() => {
+  //   clearInterval(timer);
+  // });
  
  return toRefs(data) //这样就会变成单值响应式的数据
 }

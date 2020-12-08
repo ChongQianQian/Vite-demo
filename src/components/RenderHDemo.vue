@@ -21,9 +21,13 @@ export default {
       h(
         "div",
         {
+          //整个 VNode props 结构是扁平的  
           onClick: increment,
+          style: { color: "red" },
+          id: "submit",
+          innerHTML: state.count,
         },
-        state.count
+        // state.count //或者这样写
       );
   },
 };

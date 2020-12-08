@@ -1,12 +1,16 @@
 <template>
   <div>
-    下面是v-model示例：
-    <p>{{ pageTitle }}</p>
+    下面是v-model父组件内容：
+    <div>
+      <p>{{ pageTitle }}</p>
+      <!-- <input type="text" :value="pageTitle" @input="handleChange"> -->
+    </div>
 
     下面是子组件内容：
-    <!-- <ChildComponent v-model="pageTitle"  placeholder="今日待办" autofocus autocomplete="off"></ChildComponent> -->
+    <ChildComponent v-model="pageTitle"  placeholder="今日待办" autofocus autocomplete="off"></ChildComponent>
+    
     <!-- <VModelDemo v-model="pageTitle"></VModelDemo> -->
-    <ChangeModelName v-model:title="pageTitle" @update:title="getChildData"></ChangeModelName>
+    <!-- <ChangeModelName v-model:title="pageTitle" @update:title="getChildData"></ChangeModelName> -->
     <!-- <MoreModel v-model:title="pageTitle" v-model:title2="pageTitle2"></MoreModel> -->
 
   </div>
@@ -41,12 +45,11 @@ export default {
       getChildData
     };
   },
-  // methods:{
-  //   getChildData(e){
-  //     console.log(e) //pageTitle
-  //     console.log("getChildData")
-  //   }
-  // }
+  methods:{
+    handleChange(e){
+      this.pageTitle = e.target.value //必须更新数值
+    }
+  }
 };
 </script>
 
