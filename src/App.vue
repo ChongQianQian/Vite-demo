@@ -30,7 +30,13 @@
   <MittDemo></MittDemo> -->
 
   <!-- v-model使用的变化：子组件更改父组件的数据 -->
-  <VModel></VModel>  
+  <!-- <VModel></VModel>   -->
+
+  <!-- Suspense -->
+  <!-- <SuspenseDemo></SuspenseDemo> -->
+
+  <!-- 渲染函数 API -->
+  <RenderHDemo></RenderHDemo>
 
   <!-- 实际案例 -->
   <!-- <Todos></Todos> -->
@@ -48,6 +54,9 @@ import TransitonTest from './components/TransitonTest.vue'
 import KeyCodeRemove from './components/KeyCodeRemove.vue'
 import MittDemo from './components/MittDemo.vue'
 import VModel from './components/VModel.vue'; 
+import SuspenseDemo from './components/SuspenseDemo.vue';
+import RenderHDemo from './components/RenderHDemo.vue'; 
+
 // import Todos from './components/todos/Todos.vue' //局部注册组件
 
 //事件派发和监听
@@ -65,7 +74,9 @@ export default {
     TransitonTest,
     KeyCodeRemove,
     MittDemo,
-    VModel
+    VModel,
+    SuspenseDemo,
+    RenderHDemo
     // Todos
   },
   methods:{
