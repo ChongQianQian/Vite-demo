@@ -27,8 +27,8 @@
   <!-- <KeyCodeRemove></KeyCodeRemove> -->
 
   <!--14-2 $on $off 和 $once被移除 -->
-  <!-- <button @click="sendMsg">emit event</button>
-  <MittDemo></MittDemo> -->
+  <button @click="sendMsg">emit event</button>
+  <MittDemo></MittDemo>
 
   <!-- 4.Emits Component Option -->
   <!-- <EmitsComponentOption @click="handleClick" @myclick="myclick"></EmitsComponentOption> -->

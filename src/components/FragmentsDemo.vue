@@ -3,6 +3,7 @@
   <header>
     <p>模块1</p>
   </header>
+  
   <footer>模块2</footer>
 </template>
 

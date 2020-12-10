@@ -1,16 +1,12 @@
 <template>
   <div>
-    <a-button type="primary">
-    Primary
-  </a-button>
+    <a-button type="primary"> Primary </a-button>
   </div>
 </template>
 <script>
 import { emiter } from "../App.vue";
 export default {
-  components: {
-   
-  },
+  components: {},
   mounted() {
     emiter.on("someEvent", (parms) => {
       console.log("接收事件");
