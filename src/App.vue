@@ -27,19 +27,20 @@
   <!-- <KeyCodeRemove></KeyCodeRemove> -->
 
   <!--14-2 $on $off 和 $once被移除 -->
-  <button @click="sendMsg">emit event</button>
-  <MittDemo></MittDemo>
+  <!-- <button @click="sendMsg">emit event</button>
+  <MittDemo></MittDemo> -->
 
   <!-- 4.Emits Component Option -->
   <!-- <EmitsComponentOption @click="handleClick" @myclick="myclick"></EmitsComponentOption> -->
   
-
   <!-- 实例方法定义组件 -->
   <!-- <comp></comp> -->
 
-
   <!-- 实际案例 -->
   <!-- <Todos></Todos> -->
+
+  <!-- 其他案例 -->
+  <OtherDemo></OtherDemo>
   <div></div>
 </template>
 
@@ -55,6 +56,8 @@ import MittDemo from './components/MittDemo.vue'
 import VModel from './components/VModel.vue'; 
 import SuspenseDemo from './components/SuspenseDemo.vue';
 import RenderHDemo from './components/RenderHDemo.vue'; 
+
+import OtherDemo from './components/OtherDemo.vue'
 
 // import Todos from './components/todos/Todos.vue' //局部注册组件
 
@@ -75,7 +78,8 @@ export default {
     MittDemo,
     VModel,
     SuspenseDemo,
-    RenderHDemo
+    RenderHDemo,
+    OtherDemo
     // Todos
   },
   methods:{
