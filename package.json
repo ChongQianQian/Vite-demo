@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "publish": "./scripts/publish.sh"
+    "build": "vite build"
   },
   "dependencies": {
     "ant-design-vue": "^2.0.0-rc.3",
