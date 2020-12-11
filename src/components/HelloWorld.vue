@@ -30,7 +30,7 @@ export default {
   props: {
     msg: String,
   },
-  data() { //data依然可以使用
+  data() {
     return {
       count: 0,
     };

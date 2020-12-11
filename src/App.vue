@@ -1,7 +1,7 @@
 <template>
 
   <!-- 1.composition api -->
-  <!-- <HelloWorld msg="Hello Vue 3.0 + Vite" /> -->
+  <HelloWorld msg="Hello Vue 3.0 + Vite" />
   <!-- 与现有的 API 配合 this使用 -->
   <!-- <CompositionDemo/> -->
 
@@ -31,8 +31,9 @@
   <MittDemo></MittDemo> -->
 
   <!-- 4.Emits Component Option -->
-  <!-- <EmitsComponentOption @click="handleClick" @myclick="myclick"></EmitsComponentOption> -->
-  
+  <!-- <EmitsComponentOption @click="handleClick"></EmitsComponentOption> -->
+  <!-- <EmitsComponentOption @myclick="myclick"></EmitsComponentOption> -->
+
   <!-- 实例方法定义组件 -->
   <!-- <comp></comp> -->
 
