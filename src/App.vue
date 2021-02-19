@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+
   <HelloWorld msg="Hello Vue 3.0 + Vite" />
+
+  <KoaTest/>
 </template>
 
 <script>
+import KoaTest from './components/KoaTest.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    KoaTest
   }
 }
 </script>
