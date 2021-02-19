@@ -1,7 +1,7 @@
 <!--
  * @Author: 云乐
  * @Date: 2021-02-08 17:29:47
- * @LastEditTime: 2021-02-19 10:35:10
+ * @LastEditTime: 2021-02-19 10:52:07
  * @LastEditors: 云乐
  * @Description: 测试koa开发的接口
 -->
@@ -25,7 +25,7 @@ export default {
 
   mounted() {
     axios
-      .get("http://localhost:7005/home")
+      .get("http://localhost:7005/home/banner")
       .then((res) => {
         console.log(res);
         this.count = "这是接口返回的数据" + res.data;
